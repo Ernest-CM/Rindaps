@@ -1,0 +1,12 @@
+https://claude.ai/share/13504889-b43e-4090-b60a-b794f0b3ce2b
+
+EXPECTATIONS......
+cross validation 
+confusion metrics
+ classifiication report
+ cohan kappa training
+ and validation accuracy and loss
+Data leakage
+
+ALL FOR CHECKING ACCURACY
+
