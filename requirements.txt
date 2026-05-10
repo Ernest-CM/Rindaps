@@ -1,0 +1,14 @@
+# Pinned during the project; regenerate with `pip freeze > requirements.txt` after env setup.
+aiohttp
+click
+matplotlib
+networkx
+numpy
+packaging
+pandas
+requests
+scikit-learn
+seaborn
+torch
+torch_geometric
+tqdm

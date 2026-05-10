@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Data — large, regenerable
+data/raw/*.json
+data/raw/*.log
+data/graph/*.pt
+data/graph/*.gpickle
+data/labeled/_envs/
+data/labeled/*.csv
+
+# Keep the seed list and the index in git so re-runs resume cleanly
+!data/raw/top-pypi-packages.json
+!data/raw/index.json
+
+# Model artefacts
+checkpoints/*.pt
+reports/figures/*.png
+reports/figures/*.pdf
+reports/metrics.json
+
+# IDE
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store

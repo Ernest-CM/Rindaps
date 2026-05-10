@@ -1,0 +1,10 @@
+{
+  "num_nodes": 7699,
+  "num_edges": 20910,
+  "feature_dim": 8,
+  "mean_in_degree": 2.715937134692817,
+  "mean_out_degree": 2.715937134692817,
+  "max_in_degree": 1860,
+  "max_out_degree": 107,
+  "isolated_nodes": 1001
+}

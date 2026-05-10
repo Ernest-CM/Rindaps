@@ -1,0 +1,23 @@
+name: rindaps
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyter
+  - networkx
+  - tqdm
+  - requests
+  - aiohttp
+  - click
+  - sqlite
+  - pip
+  - pip:
+      - packaging
+      - torch --index-url https://download.pytorch.org/whl/cpu
+      - torch_geometric

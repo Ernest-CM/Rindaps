@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -fsSL -o data/raw/top-pypi-packages.json https://hugovk.github.io/top-pypi-packages/top-pypi-packages.min.json)",
+      "Bash(curl -fsSL --ssl-no-revoke -o data/raw/top-pypi-packages.json https://hugovk.github.io/top-pypi-packages/top-pypi-packages.min.json)",
+      "Bash(python -c \"import json; d=json.load\\(open\\('data/raw/top-pypi-packages.json','r',encoding='utf-8'\\)\\); rows=d.get\\('rows'\\) or d.get\\('packages'\\) or d; print\\('total entries:', len\\(rows\\)\\); print\\('first 5:', [r.get\\('project'\\) if isinstance\\(r,dict\\) else r for r in rows[:5]]\\)\")",
+      "Bash(python -c \"import torch, torch_geometric, networkx, packaging, numpy; print\\('torch', torch.__version__\\); print\\('torch_geometric', torch_geometric.__version__\\); print\\('networkx', networkx.__version__\\); print\\('packaging', packaging.__version__\\); print\\('numpy', numpy.__version__\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/build_graph.py'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/label.py'\\).read\\(\\)\\); print\\('label.py syntax OK'\\)\")",
+      "Bash(python -c \"import csv,json; rows=list\\(csv.DictReader\\(open\\('data/labeled/smoke_candidates.csv',encoding='utf-8'\\)\\)\\); [print\\(r['config_id'], json.loads\\(r['packages_json']\\), r['source']\\) for r in rows[:5]]; print\\('total:', len\\(rows\\)\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/sample.py'\\).read\\(\\)\\); print\\('sample.py syntax OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/sample.py'\\).read\\(\\)\\); ast.parse\\(open\\('src/label.py'\\).read\\(\\)\\); print\\('syntax OK'\\)\")",
+      "Bash(python -c \"import ast; [ast.parse\\(open\\(p\\).read\\(\\)\\) for p in ['src/features.py','src/models/gcn.py','src/models/gat.py','src/models/baselines.py','src/train.py']]; print\\('all syntax OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/features.py'\\).read\\(\\)\\); ast.parse\\(open\\('src/train.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python -c \"import ast; [ast.parse\\(open\\(p\\).read\\(\\)\\) for p in ['src/features.py','src/models/gcn.py','src/models/gat.py','src/train.py']]; print\\('OK'\\)\")",
+      "Bash(python -c \"import ast; tree = ast.parse\\(open\\('src/features.py'\\).read\\(\\)\\); names = [n.name for n in tree.body if isinstance\\(n, ast.FunctionDef\\) or isinstance\\(n, ast.ClassDef\\)]; print\\(names\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/features.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python -c \"import ast; [ast.parse\\(open\\(p\\).read\\(\\)\\) for p in ['src/train.py','src/models/gcn.py','src/models/gat.py']]; print\\('OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/train.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python -c \"import ast; ast.parse\\(open\\('src/evaluate.py'\\).read\\(\\)\\); print\\('OK'\\)\")",
+      "Bash(python -c \"import ast; [ast.parse\\(open\\(p\\).read\\(\\)\\) for p in ['src/evaluate.py','src/cli.py']]; print\\('OK'\\)\")"
+    ]
+  }
+}
